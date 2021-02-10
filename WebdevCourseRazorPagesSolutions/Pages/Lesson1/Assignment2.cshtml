@@ -1,0 +1,42 @@
+@page
+@using Exercises.Pages.Lesson1
+@model Exercises.Pages.Lesson1.Exercise2
+
+@{
+    Layout = null;
+}
+
+@{
+    var queryParameters = Model.GetDirectionParameters();
+}
+
+<a href="?direction=Left&@queryParameters">Left</a>
+<a href="?direction=Right&@queryParameters">Right</a>
+<a href="?direction=Forward&@queryParameters">Forward</a>
+<a href="?direction=Backward&@queryParameters">Backward</a>
+
+<hr>
+<a href="?direction=Clear">Clear</a>
+
+<hr>
+
+<ul id="route">
+    @foreach (var direction in Model.Directions)
+    {
+        switch (direction)
+        {
+            case Exercise2.Direction.Left:
+                <li>Left</li>
+            break;
+            case Exercise2.Direction.Right:
+                <li>Right</li>
+                break;
+            case Exercise2.Direction.Forward:
+                <li>Forward</li>
+                break;
+            case Exercise2.Direction.Backward:
+                <li>Backward</li>
+            break;
+        }
+    }
+</ul>

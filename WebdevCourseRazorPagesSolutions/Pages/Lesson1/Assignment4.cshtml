@@ -1,0 +1,32 @@
+@page "{category:categoryConstraint}/{subcategory:categoryConstraint?}/{productId:min(1)?}"
+@using Microsoft.AspNetCore.Routing
+@model Exercises.Pages.Lesson1.Assignment4
+
+@{
+    Layout = null;
+}
+
+<h1 id="categoryHeading">
+    @RouteData.Values["category"]
+
+</h1>
+<h2 id="subCategoryHeading">
+    @if (!RouteData.Values.Keys.Contains("subcategory"))
+    {
+        @("Geen subcategory")
+    }
+    else
+    {
+        @RouteData.Values["subcategory"]
+    }
+</h2>
+<h3 id="productIdHeading">
+    @if (!RouteData.Values.Keys.Contains("productId"))
+    {
+        @("Geen productId")
+    }
+    else
+    {
+         @RouteData.Values["productId"]
+    }
+</h3>

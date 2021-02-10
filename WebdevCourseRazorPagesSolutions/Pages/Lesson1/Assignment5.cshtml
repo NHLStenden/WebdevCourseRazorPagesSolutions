@@ -1,0 +1,26 @@
+@page
+@model Exercises.Pages.Lesson1.Assignment5
+
+@{
+    Layout = null;
+}
+
+<div>
+    <form method="post">
+        <h1>Happy<span id="happyCount">@Model.Counter.Happy</span>
+            <button id="btnHappy" type="submit" name="action" value="Happy">Happy++</button>
+        </h1>
+
+        <h1>Disappointed<span id="disappointedCount">@Model.Counter.Disappointed</span>
+            <button id="btnDisappointed" type="submit" name="action" value="Disappointed">Disappointed++</button>
+        </h1>
+
+        <h1>Angry<span id="angryCount">@Model.Counter.Angry</span>
+            <button id="btnAngry" type="submit" name="action" value="Angry">Angry++</button>
+        </h1>
+
+        <hr>
+
+        <button id="btnDeleteCookie" type="submit" name="action" value="DeleteCookie">Delete Cookie</button>
+    </form>
+</div>

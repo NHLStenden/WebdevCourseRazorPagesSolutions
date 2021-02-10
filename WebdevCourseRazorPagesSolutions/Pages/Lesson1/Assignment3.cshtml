@@ -1,0 +1,21 @@
+@page
+@model Exercises.Pages.Lesson1.Assignment3
+
+@{
+    Layout = null;
+}
+
+<div>
+    <p id="result">@Model.Value</p>
+</div>
+
+<form method="post" id="calculatorForm">
+    <input asp-for="Value" type="hidden" value="@Model.Value">
+    <input asp-for="Input" type="text" value="@Model.Input">
+    <button id="addBtn" type="submit" asp-page-handler="Add">+</button>
+    <button id="subBtn" type="submit" asp-page-handler="Sub">-</button>
+    <button id="mulBtn" type="submit" asp-page-handler="Mul">*</button>
+    <button id="divBtn" type="submit" asp-page-handler="Div">/</button>
+</form>
+
+
