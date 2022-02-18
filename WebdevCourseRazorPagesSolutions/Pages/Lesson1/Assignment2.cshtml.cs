@@ -23,7 +23,7 @@ namespace Exercises.Pages.Lesson1
 
             foreach (var direction in Directions)
             {
-                result += $"direction={direction}&";
+                result += $"&direction={direction}";
             }
 
             return result;

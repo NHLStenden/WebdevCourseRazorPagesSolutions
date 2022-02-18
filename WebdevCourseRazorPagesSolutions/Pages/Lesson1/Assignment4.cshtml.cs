@@ -15,7 +15,7 @@ namespace Exercises.Pages.Lesson1
         }
     }
 
-    class CategoryConstraint : IRouteConstraint
+    public class CategoryConstraint : IRouteConstraint
     {
         public CategoryConstraint()
         {
